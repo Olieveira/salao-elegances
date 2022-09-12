@@ -1,0 +1,27 @@
+{
+  "name": "salao-elegances",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olieveira/salao-elegances.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olieveira/salao-elegances/issues"
+  },
+  "homepage": "https://github.com/Olieveira/salao-elegances#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "next": "^12.3.0",
+    "react": "^18.2.0",
+    "reactdom": "^2.0.0",
+    "reactstrap": "^9.1.4"
+  }
+}
