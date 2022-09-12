@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Menu from "../components/Menu.js";
+import Teste from "../components/Teste.js";
 
 function Home() {
 
@@ -10,6 +11,8 @@ function Home() {
       </Head>
 
       <Menu />
+
+      <Teste/>
     
     </>
   );

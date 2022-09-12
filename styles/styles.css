@@ -1,6 +1,11 @@
 body {
   background-color: #121111 !important;
 }
+.menu{
+    backdrop-filter: saturate(180%) blur(15px);
+    position: fixed!important;
+    top: 0px important;
+}
 .show{
     display: block!important;
 }
