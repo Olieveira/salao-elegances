@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import logo from "../src/imagens/logo.png";
 
-function MenuDesktop() {
+function MenuDesktop(empresaY, servicosY) {
 
   function showMenu() {
     const menu = document.getElementById("menu");
@@ -34,7 +34,7 @@ function MenuDesktop() {
         <div className="txt-lightBlue titulo">SALÃO ELEGANCES</div>
         <div className="links-menu txt-lightBlue d-flex flex-row flex-wrap justify-content-around align-items-center">
           <a href="/">HOME</a>
-          <a href="#">EMPRESA</a>
+          <a onClick={() => {window.scrollTo(0, empresaY)}}>EMPRESA</a>
           <a href="#">SERVICOS</a>
           <a href="#">AGENDE SEU HORARIO</a>
         </div>

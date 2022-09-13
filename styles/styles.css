@@ -1,5 +1,50 @@
 body {
   background-color: #121111 !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.items-about h2 {
+  margin-bottom: 1rem;
+  color: #8080db;
+  font-family: "Jura", sans-serif !important;
+  font-size: xx-large;
+}
+
+.items-about p {
+  line-height: 40px;
+  color: #a4a4d3;
+  font-size: larger;
+}
+.items-about a {
+  text-decoration: none !important;
+  color: #a4a4d3;
+  animation: blink-loop 1s infinite 2s;
+  font-weight: bolder;
+}
+.items-about {
+  width: 75%;
+}
+.line-caract-about {
+  min-width: 40%;
+  min-height: 2px;
+  background-color: #8080db;
+  box-shadow: 0px 2px 5px 0px #8080dbc5;
+  animation: wide-loop 3s alternate infinite;
+}
+.first-img div {
+  background-image: url(../src/imagens/woman.png);
+  background-size: contain;
+  background-position: center;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 250px;
+}
+.first-img {
+  background-color: transparent !important;
+  min-width: 200px;
+  min-height: 300px;
+  padding: 2px;
 }
 .button-desc {
   background-color: none !important;
@@ -64,37 +109,72 @@ body {
   border-radius: 10px;
   padding: 0.25rem;
 }
+.links-menu a:hover {
+  color: #5757c8!important;
+  text-decoration: underline!important;
+}
 .links-menu a {
   padding: 0.25rem 0.3rem;
   margin: 0 0.25rem;
   text-decoration: none !important;
   color: #8080db !important;
+  font-family: "Jura", sans-serif !important;
 }
 .titulo {
   font-size: x-large;
   padding: 0 0.25rem;
   margin: 0 0.4rem;
   text-align: center !important;
+  font-family: "Big Shoulders Text", cursive !important;
+  font-size: 2.3rem;
 }
 .txt-lightBlue {
   color: #8080db !important;
 }
-.footer{
-  position: absolute;
-  bottom: 0px;
+.footer div:last-child {
+  text-align: end;
 }
-.logo{
+.footer div:first-child {
+  text-align: start;
+}
+.footer div {
+  margin: 0 0.25rem;
+}
+.footer {
+  border-top: solid 1px #a4a4d3;
+  position: static !important;
+  bottom: 0px;
+  color: #a4a4d3;
+  font-family: "Jura", sans-serif !important;
+}
+.logo {
   border-radius: 30px;
 }
+@keyframes wide-loop {
+  0% {
+    min-width: 20%;
+  }
+  100% {
+    min-width: 40%;
+  }
+}
 
+@keyframes blink-loop {
+  0% {
+    color: #a4a4d3;
+  }
+  100% {
+    color: #5757c8;
+  }
+}
 @keyframes top-bottom {
   0% {
     opacity: 0;
-    font-size: 0px;
+    height: 0px;
   }
   100% {
     opacity: 1;
-    font-size: 15px;
+    height: 10px;
   }
 }
 @keyframes expand-menu {
@@ -121,5 +201,18 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .items-about {
+    width: 100%;
+  }
+  .links-menu a:last-child{
+    background-color: none!important;
+    border-radius: 12px;
+    border: solid 2px #5757c8;
+    color: #8080db!important;
+    font-family: 'Lalezar', sans-serif, cursive !important;
   }
 }

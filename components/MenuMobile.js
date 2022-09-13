@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import menu from "../src/icones/menu.png";
 
-function MenuMobile() {
+function MenuMobile(empresaY, servicosY) {
   const [visible, setVisible] = useState("hidden");
 
   function showMenu() {
@@ -51,7 +51,7 @@ function MenuMobile() {
           <a href="/">HOME</a>
           <a href="#">EMPRESA</a>
           <a href="#">SERVICOS</a>
-          <a href="#">AGENDE SEU HORARIO</a>
+          <a href="#">AGENDAR HORARIO</a>
         </div>
       </div>
     </div>
