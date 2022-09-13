@@ -1,13 +1,9 @@
 import useWindowDimensions from "../pages/useWindowDimensions";
-import ResponsiveMenu from "./ResponsiveMenu";
+import MenuDesktop from "./MenuDesktop";
+import MenuMobile from "./MenuMobile";
 
-function Menu() {
+export default function Menu() {
+  const [height, width] = useWindowDimensions();
 
-  return (
-    <>
-      <ResponsiveMenu />
-    </>
-  );
+  return <>{width > 750 ? <MenuDesktop /> : <MenuMobile />}</>;
 }
-
-export default Menu;

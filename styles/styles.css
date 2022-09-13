@@ -1,13 +1,54 @@
 body {
   background-color: #121111 !important;
 }
-.menu{
-    backdrop-filter: saturate(180%) blur(15px);
-    position: fixed!important;
-    top: 0px important;
+.button-desc {
+  background-color: none !important;
+  border: 1px solid #8080db;
+  border-radius: 15px;
 }
-.show{
-    display: block!important;
+.button-desc a {
+  text-decoration: none !important;
+  color: #8080db;
+  font-size: larger;
+  font-family: "Jura", sans-serif !important;
+}
+.items-desc p:last-child:after {
+  content: none !important;
+}
+.items-desc p:after {
+  content: "|";
+  margin: 0 0.5rem;
+  animation: top-bottom 1.5s alternate infinite;
+}
+.items-desc p {
+  font-family: "Jura", sans-serif !important;
+  color: #a4a4d3;
+  font-size: large;
+}
+.titulo-desc h1 {
+  color: #8080db;
+  font-family: "Big Shoulders Text", cursive !important;
+  font-size: 3.5rem !important;
+}
+.line {
+  height: 2px;
+  background-color: #8080db;
+}
+.menu-fixed {
+  top: 0px;
+  position: fixed;
+  backdrop-filter: saturate(180%) blur(15px);
+  animation: appair-down 0.7s;
+}
+.menu {
+  backdrop-filter: saturate(180%) blur(15px);
+  top: 0px;
+  animation: show-opacity 1s;
+  min-height: 80px;
+}
+.show {
+  display: block !important;
+  animation: show-opacity 1s;
 }
 .hidden {
   display: none !important;
@@ -37,4 +78,48 @@ body {
 }
 .txt-lightBlue {
   color: #8080db !important;
+}
+.footer{
+  position: absolute;
+  bottom: 0px;
+}
+.logo{
+  border-radius: 30px;
+}
+
+@keyframes top-bottom {
+  0% {
+    opacity: 0;
+    font-size: 0px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 15px;
+  }
+}
+@keyframes expand-menu {
+  0% {
+    transform: scaleY(80px);
+  }
+  100% {
+    transform: scaleY(130px);
+  }
+}
+
+@keyframes appair-down {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes show-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
