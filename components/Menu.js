@@ -7,7 +7,9 @@ export default function Menu() {
   const [empresaY, setEmpresaY] = useState(0);
   const [servicosY, setServicosY] = useState(0);
   useEffect(() => {
-    setEmpresaY(document.getElementById('about').getBoundingClientRect().y);
+    let aboutContent = document.getElementById('about');
+    setEmpresaY(aboutContent.getBoundingClientRect().y)
+    console.log(aboutContent.getBoundingClientRect().y) 
   })
   const [height, width] = useWindowDimensions();
 

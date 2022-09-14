@@ -3,16 +3,15 @@ import Image from "next/image";
 import React from "react";
 import logo from "../src/imagens/logo.png";
 
-function MenuDesktop(empresaY, servicosY) {
-
+function MenuDesktop(props) {
   function showMenu() {
     const menu = document.getElementById("menu");
-    menu.classList.replace('menu', 'menu-fixed');
-  };
+    menu.classList.replace("menu", "menu-fixed");
+  }
 
   function closeMenu() {
     const menu = document.getElementById("menu");
-    menu.classList.replace('menu-fixed', 'menu');
+    menu.classList.replace("menu-fixed", "menu");
   }
 
   useEffect(() => {
@@ -24,7 +23,10 @@ function MenuDesktop(empresaY, servicosY) {
 
   return (
     <>
-      <div id="menu" className="menu d-flex flex-row justify-content-around align-items-center bottom-shadow w-100">
+      <div
+        id="menu"
+        className="menu d-flex flex-row justify-content-around align-items-center bottom-shadow w-100"
+      >
         <Image
           className="align-self-start logo"
           src={logo}
@@ -34,7 +36,13 @@ function MenuDesktop(empresaY, servicosY) {
         <div className="txt-lightBlue titulo">SALÃO ELEGANCES</div>
         <div className="links-menu txt-lightBlue d-flex flex-row flex-wrap justify-content-around align-items-center">
           <a href="/">HOME</a>
-          <a onClick={() => {window.scrollTo(0, empresaY)}}>EMPRESA</a>
+          <a
+            onClick={() => {
+              window.scrollTo(0, props.empresaY - 100);
+            }}
+          >
+            EMPRESA
+          </a>
           <a href="#">SERVICOS</a>
           <a href="#">AGENDE SEU HORARIO</a>
         </div>

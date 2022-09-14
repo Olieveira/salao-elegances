@@ -13,8 +13,8 @@ export default function AboutResponsive() {
             oferecer uma grande variedade de serviços com muita qualidade!
           </p>
         </div>
-        <div className="d-flex flex-column justify-content-center align-items-center first-img w-25">
-          <div></div>
+        <div className="d-flex flex-column justify-content-center align-items-center content-img w-25">
+          <div className="second-img"></div>
         </div>
         ;
       </>
@@ -22,8 +22,8 @@ export default function AboutResponsive() {
   } else {
     return (
       <>
-        <div className="d-flex flex-column justify-content-center align-items-center first-img w-25">
-          <div></div>
+        <div className="d-flex flex-column justify-content-center align-items-center content-img w-25">
+          <div className="second-img"></div>
         </div>
         <div className="text-center items-about">
           <h2>VARIEDADE</h2>

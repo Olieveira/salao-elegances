@@ -3,6 +3,29 @@ body {
   margin: 0px !important;
   padding: 0px !important;
 }
+.current{
+  background-color: white;
+  border-radius: 100%;
+}
+.blur{
+  backdrop-filter: saturate(180%) blur(10px);
+}
+.services-content div:last-child a{
+  margin: 0.25rem 0.5rem;
+}
+.services-bg {
+  position: relative;
+  background-image: url(../src/imagens/barbearia.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  width: 100%!important;
+  height: 500px;
+}
+.services-content {
+  border: solid 1px #8080db;
+}
 .items-about h2 {
   margin-bottom: 1rem;
   color: #8080db;
@@ -31,8 +54,16 @@ body {
   box-shadow: 0px 2px 5px 0px #8080dbc5;
   animation: wide-loop 3s alternate infinite;
 }
-.first-img div {
-  background-image: url(../src/imagens/woman.png);
+.first-img {
+  background-image: url(../src/imagens/woman-colored.png);
+}
+.second-img {
+  background-image: url(../src/imagens/man-colored.png);
+}
+.third-img {
+  background-image: url(../src/imagens/hairstyle-colored.png);
+}
+.content-img div {
   background-size: contain;
   background-position: center;
   background-attachment: local;
@@ -40,7 +71,7 @@ body {
   width: 100%;
   height: 250px;
 }
-.first-img {
+.content-img {
   background-color: transparent !important;
   min-width: 200px;
   min-height: 300px;
@@ -110,8 +141,8 @@ body {
   padding: 0.25rem;
 }
 .links-menu a:hover {
-  color: #5757c8!important;
-  text-decoration: underline!important;
+  color: #5757c8 !important;
+  text-decoration: underline !important;
 }
 .links-menu a {
   padding: 0.25rem 0.3rem;
@@ -119,6 +150,16 @@ body {
   text-decoration: none !important;
   color: #8080db !important;
   font-family: "Jura", sans-serif !important;
+}
+.links-menu div:last-child a {
+  background-color: none !important;
+  border-radius: 12px;
+  border: solid 2px #5757c8;
+  color: #8080db !important;
+  font-family: "Lalezar", sans-serif, cursive !important;
+}
+.links-menu div {
+  margin: 0.3rem 0 !important;
 }
 .titulo {
   font-size: x-large;
@@ -149,6 +190,9 @@ body {
 }
 .logo {
   border-radius: 30px;
+}
+#menu{
+  z-index: 1;
 }
 @keyframes wide-loop {
   0% {
@@ -207,12 +251,5 @@ body {
 @media (max-width: 750px) {
   .items-about {
     width: 100%;
-  }
-  .links-menu a:last-child{
-    background-color: none!important;
-    border-radius: 12px;
-    border: solid 2px #5757c8;
-    color: #8080db!important;
-    font-family: 'Lalezar', sans-serif, cursive !important;
   }
 }

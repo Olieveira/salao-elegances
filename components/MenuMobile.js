@@ -43,15 +43,19 @@ function MenuMobile(empresaY, servicosY) {
           <Image className="cursor" src={menu} width={"40px"} height={"40px"} />
         </div>
       </div>
-      <div className={`${visible}`}>
+      <div className={`pb-3 ${visible}`}>
         <div
-          className="links-menu txt-lightBlue d-flex flex-row justify-content-center align-items-center text-center"
+          className="links-menu txt-lightBlue d-flex flex-row flex-wrap justify-content-center align-items-center text-center"
           style={{ border: "none" }}
         >
-          <a href="/">HOME</a>
-          <a href="#">EMPRESA</a>
-          <a href="#">SERVICOS</a>
-          <a href="#">AGENDAR HORARIO</a>
+          <div>
+            <a href="/">HOME</a>
+            <a href="#">EMPRESA</a>
+            <a href="#">SERVICOS</a>
+          </div>
+          <div>
+            <a href="#">AGENDAR HORARIO</a>
+          </div>
         </div>
       </div>
     </div>

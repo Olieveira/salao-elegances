@@ -8,8 +8,8 @@ export default function About() {
         style={{ minHeight: "500px" }}
       >
         <div className="w-100 p-4 d-flex flex-row flex-wrap justify-content-center align-items-center">
-          <div className="d-flex flex-column justify-content-center align-items-center first-img w-25">
-            <div></div>
+          <div className="d-flex flex-column justify-content-center align-items-center content-img w-25">
+            <div className="first-img"></div>
           </div>
           <div className="text-center items-about">
             <h2>EXPERIÊNCIA</h2>
@@ -27,8 +27,8 @@ export default function About() {
         <span className="line-caract-about" />
 
         <div className="w-100 p-4 d-flex flex-row flex-wrap justify-content-center align-items-center">
-          <div className="d-flex flex-column justify-content-center align-items-center first-img w-25">
-            <div></div>
+          <div className="d-flex flex-column justify-content-center align-items-center content-img w-25">
+            <div className="third-img"></div>
           </div>
           <div className="text-center items-about">
             <h2>COMUNICAÇÃO</h2>
