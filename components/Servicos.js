@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Servicos() {
-  const [called, setCalled] = useState(false);
+  let t = 0;
   const [current, setCurrent] = useState(0);
 
   const servicos = [
@@ -18,53 +18,59 @@ export default function Servicos() {
     "DEPILAÇÃO",
   ];
 
-  useEffect(() => {
-    setFunction();
-  });
-
-  function setFunction() {
-    if (called == false) {
-      setInterval(changeCurrent, 2000);
-      setCalled(true);
-    }
-  }
-
-  function changeCurrent() {
-    setCurrent(current + 1);
-    console.log("current: ", current);
-    console.log("lenght: ", servicos.length);
+  function changeCurrentClick(indexClick) {
+    clearTimeout(t);
+    setCurrent(indexClick);
   }
 
   return (
-    <div className="mt-5 d-flex flex-column justify-content-center align-items-center">
+    <div id='service' className="mt-5 d-flex flex-column justify-content-center align-items-center">
       <div className="mx-2 w-100 services-content d-flex flex-column justify-content-center align-items-center">
-        <div className="w-100 services-bg">
-          <div className="d-flex flex-column justify-content-center align-items-center blur">
-            <div>
-              <h2>SERVIÇOS</h2>
+        <div className="services-bg d-flex flex-column justify-content-center align-items-center">
+          <div className="slider-content d-flex flex-column justify-content-center align-items-center">
+            <div className="info-content d-flex flex-column justify-content-center aling-items-center blur">
+              <div className="mb-3">
+                <h2>SERVIÇOS</h2>
+              </div>
+              <div className="mb-5">{servicos[current]}</div>
+              <div>
+                <a href="#">AGENDAR</a>
+              </div>
             </div>
-            <div>{servicos[current]}</div>
-            <div>
-              <a href="#">AGENDAR</a>
+            <div className="selectors-bar w-100 d-flex flex-row justify-content-center align-items-center">
+              {servicos.map(function onEach(item, index) {
+                if (index >= servicos.length - 1) {
+                  if (current + 1 < servicos.length) {
+                    t = setTimeout(() => setCurrent(current + 1), 5000);
+                  } else {
+                    t = setTimeout(() => setCurrent(0), 5000);
+                  };
+                }
+
+                if (index == current) {
+                  return (
+                    <div
+                      key={item}
+                      className="selector current"
+                      onClick={() => {
+                        changeCurrentClick(index);
+                      }}
+                    ></div>
+                  );
+                } else {
+                  return (
+                    <div
+                      key={item}
+                      className="selector"
+                      onClick={() => {
+                        changeCurrentClick(index);
+                      }}
+                    ></div>
+                  );
+                }
+              })}
             </div>
           </div>
-        </div>
-        <div className="w-100 d-flex flex-row justify-content-center align-items-center">
-          {servicos.map(function onEach(item, index) {
-            if (index == current) {
-              return (
-                <a key={item} className="selector current">
-                  O
-                </a>
-              );
-            } else {
-              return (
-                <a key={item} className="selector">
-                  O
-                </a>
-              );
-            }
-          })}
         </div>
       </div>
     </div>

@@ -3,7 +3,11 @@ import Image from "next/image";
 import React, { useState } from "react";
 import menu from "../src/icones/menu.png";
 
-function MenuMobile(empresaY, servicosY) {
+function MenuMobile(props) {
+  let phoneNumber = 5541984040567;
+  let msg = `*Ola*, fui redirecionado(a) do site!\n\n
+  *MENSAGEM ENVIADA AUTOMATICAMENTE!*`;
+  
   const [visible, setVisible] = useState("hidden");
 
   function showMenu() {
@@ -50,11 +54,23 @@ function MenuMobile(empresaY, servicosY) {
         >
           <div>
             <a href="/">HOME</a>
-            <a href="#">EMPRESA</a>
-            <a href="#">SERVICOS</a>
+            <a
+              onClick={() => {
+                window.scrollTo(0, props.empresaY - 100);
+              }}
+            >
+              EMPRESA
+            </a>
+            <a
+              onClick={() => {
+                window.scrollTo(0, props.servicosY - 100);
+              }}
+            >
+              SERVICOS
+            </a>
           </div>
           <div>
-            <a href="#">AGENDAR HORARIO</a>
+            <a href={`https://wa.me/${phoneNumber}?text=${encodeURI(msg)}`} target='_blank'>AGENDAR HORARIO</a>
           </div>
         </div>
       </div>

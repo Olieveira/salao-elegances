@@ -3,15 +3,63 @@ body {
   margin: 0px !important;
   padding: 0px !important;
 }
-.current{
-  background-color: white;
-  border-radius: 100%;
+.info-content a:hover {
+  background-color: #2e2e53;
+  border: solid 3px #8080db;
+  color: #8080db;
+  transition: all 0.3s;
 }
-.blur{
+.info-content a {
+  padding: 0.25rem 2rem;
+  background-color: transparent;
+  border: solid 3px #2e2e53;
+  color: #2e2e53;
+  border-radius: 10px;
+  text-decoration: none !important;
+  font-family: "Lalezar", sans-serif, cursive !important;
+  font-size: x-large;
+}
+.info-content div:nth-child(2) {
+  font-size: 2.8rem;
+  color: #2e2e53;
+  font-family: "Lalezar", sans-serif, cursive !important;
+}
+.info-content div:nth-child(1) h2 {
+  text-align: center !important;
+  color: #121111;
+  font-family: "Jura", sans-serif !important;
+  font-size: xx-large;
+}
+.info-content {
+  padding: 0 0.25rem;
+  width: 75%;
+  height: 75%;
+  text-align: center;
+}
+.selectors-bar {
+  position: absolute;
+  bottom: 0px !important;
+}
+.selector {
+  cursor: pointer;
+  margin: 0.5rem 0.25rem;
+  border-radius: 100%;
+  min-width: 20px !important;
+  height: 20px !important;
+  border: #8080db solid 1px;
+}
+.current {
+  background-color: #5757c8;
+}
+.blur {
   backdrop-filter: saturate(180%) blur(10px);
 }
-.services-content div:last-child a{
+.services-content div:last-child a {
   margin: 0.25rem 0.5rem;
+}
+.slider-content {
+  min-height: 400px;
+  width: 75% !important;
 }
 .services-bg {
   position: relative;
@@ -20,8 +68,8 @@ body {
   background-position: center;
   background-attachment: local;
   background-repeat: no-repeat;
-  width: 100%!important;
-  height: 500px;
+  width: 100% !important;
+  height: 450px;
 }
 .services-content {
   border: solid 1px #8080db;
@@ -145,6 +193,7 @@ body {
   text-decoration: underline !important;
 }
 .links-menu a {
+  cursor: pointer !important;
   padding: 0.25rem 0.3rem;
   margin: 0 0.25rem;
   text-decoration: none !important;
@@ -191,7 +240,7 @@ body {
 .logo {
   border-radius: 30px;
 }
-#menu{
+#menu {
   z-index: 1;
 }
 @keyframes wide-loop {
@@ -250,6 +299,21 @@ body {
 
 @media (max-width: 750px) {
   .items-about {
+    width: 100%;
+  }
+  .info-content a {
+    padding: 0.25rem 2rem;
+    font-size: x-large;
+  }
+  .info-content div:nth-child(2) {
+    font-size: 2rem;
+    color: #2e2e53;
+  }
+  .info-content div:nth-child(1) h2 {
+    font-size: 1.5rem;
+  }
+  .info-content {
+    padding: 0 0;
     width: 100%;
   }
 }

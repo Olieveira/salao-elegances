@@ -4,6 +4,10 @@ import React from "react";
 import logo from "../src/imagens/logo.png";
 
 function MenuDesktop(props) {
+  let phoneNumber = 5541984040567;
+  let msg = `*Ola*, fui redirecionado(a) do site!\n\n
+  *MENSAGEM ENVIADA AUTOMATICAMENTE!*`;
+
   function showMenu() {
     const menu = document.getElementById("menu");
     menu.classList.replace("menu", "menu-fixed");
@@ -43,8 +47,14 @@ function MenuDesktop(props) {
           >
             EMPRESA
           </a>
-          <a href="#">SERVICOS</a>
-          <a href="#">AGENDE SEU HORARIO</a>
+          <a
+            onClick={() => {
+              window.scrollTo(0, props.servicosY - 100);
+            }}
+          >
+            SERVICOS
+          </a>
+          <a href={`https://wa.me/${phoneNumber}?text=${encodeURI(msg)}`} target='_blank'>AGENDE SEU HORARIO</a>
         </div>
       </div>
     </>
