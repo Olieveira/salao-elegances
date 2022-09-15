@@ -3,6 +3,33 @@ body {
   margin: 0px !important;
   padding: 0px !important;
 }
+.show-opacity-animation {
+  animation: show-opacity 1s;
+}
+.arrows div:nth-child(2) {
+  padding: 0 4rem 0 0;
+}
+.arrows div:nth-child(1) {
+  padding: 0 0 0 4rem;
+}
+.arrows img {
+  background-color: #2e2e53;
+  border-radius: 100%;
+}
+.arrows div div:last-child img:hover{
+  background-color: #5757c8;
+  transition: background-color 0.2s;
+}
+.arrows div div:first-child img:hover{
+  background-color: #5757c8;
+  transition: background-color 0.2s;
+}
+.arrows div div img {
+  cursor: pointer;
+}
+.arrows {
+  position: absolute;
+}
 .info-content a:hover {
   background-color: #2e2e53;
   border: solid 3px #8080db;
@@ -39,6 +66,7 @@ body {
 .selectors-bar {
   position: absolute;
   bottom: 0px !important;
+  backdrop-filter: saturate(120%) blur(10px);
 }
 .selector {
   cursor: pointer;
@@ -50,6 +78,9 @@ body {
 }
 .current {
   background-color: #5757c8;
+  min-width: 25px !important;
+  height: 25px !important;
+  animation: check-slide 1s;
 }
 .blur {
   backdrop-filter: saturate(180%) blur(10px);
@@ -243,6 +274,16 @@ body {
 #menu {
   z-index: 1;
 }
+
+@keyframes check-slide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes wide-loop {
   0% {
     min-width: 20%;
@@ -315,5 +356,14 @@ body {
   .info-content {
     padding: 0 0;
     width: 100%;
+  }
+  .arrows div:nth-child(2) {
+    padding: 0 0.2rem 0 0;
+  }
+  .arrows div:nth-child(1) {
+    padding: 0 0 0 0.2rem;
+  }
+  .arrows div img {
+    max-width: 35px !important;
   }
 }
