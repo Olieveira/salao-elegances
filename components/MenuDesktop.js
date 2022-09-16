@@ -47,7 +47,7 @@ function MenuDesktop(props) {
           >
             EMPRESA
           </a>
-          <a
+          <a href="#"
             onClick={() => {
               window.scrollTo(0, props.servicosY - 100);
             }}

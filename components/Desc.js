@@ -1,4 +1,8 @@
 function Desc() {
+  let phoneNumber = 5541984040567;
+  let msg = `*Ola*, fui redirecionado(a) do site!\n\n
+  *MENSAGEM ENVIADA AUTOMATICAMENTE!*`;
+
   return (
     <>
       <div
@@ -19,7 +23,7 @@ function Desc() {
             <p>Depilação</p>
           </div>
           <div className="p-2 button-desc">
-            <a href="#">ENTRAR EM CONTATO</a>
+            <a href={`https://wa.me/${phoneNumber}?text=${encodeURI(msg)}`} target='_blank' >ENTRAR EM CONTATO</a>
           </div>
         </div>
       </div>

@@ -3,6 +3,17 @@ body {
   margin: 0px !important;
   padding: 0px !important;
 }
+.img-rotation div {
+  background-image: url("../src/icones/tesoura.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-width: 50px !important;
+  min-height: 50px !important;
+  position: absolute!important;
+  top: 10px!important;
+  animation: rotation-loop 2s infinite;
+}
 .show-opacity-animation {
   animation: show-opacity 1s;
 }
@@ -16,11 +27,11 @@ body {
   background-color: #2e2e53;
   border-radius: 100%;
 }
-.arrows div div:last-child img:hover{
+.arrows div div:last-child img:hover {
   background-color: #5757c8;
   transition: background-color 0.2s;
 }
-.arrows div div:first-child img:hover{
+.arrows div div:first-child img:hover {
   background-color: #5757c8;
   transition: background-color 0.2s;
 }
@@ -39,23 +50,23 @@ body {
 .info-content a {
   padding: 0.25rem 2rem;
   background-color: transparent;
-  border: solid 3px #2e2e53;
-  color: #2e2e53;
+  border: solid 3px #8080db;
+  color: #8080db;
   border-radius: 10px;
   text-decoration: none !important;
   font-family: "Lalezar", sans-serif, cursive !important;
   font-size: x-large;
 }
-.info-content div:nth-child(2) {
+.info-content div:nth-child(3) {
   font-size: 2.8rem;
-  color: #2e2e53;
-  font-family: "Lalezar", sans-serif, cursive !important;
-}
-.info-content div:nth-child(1) h2 {
-  text-align: center !important;
-  color: #121111;
+  color: #a4a4d3;
   font-family: "Jura", sans-serif !important;
-  font-size: xx-large;
+}
+.info-content div:nth-child(2) h2 {
+  font-family: "Lalezar", sans-serif, cursive !important;
+  text-align: center !important;
+  color: #8080db;
+  font-size: 2.4rem !important;
 }
 .info-content {
   padding: 0 0.25rem;
@@ -82,6 +93,9 @@ body {
   height: 25px !important;
   animation: check-slide 1s;
 }
+.blur-blackBrightness {
+  backdrop-filter: blur(5px) brightness(40%);
+}
 .blur {
   backdrop-filter: saturate(180%) blur(10px);
 }
@@ -89,7 +103,7 @@ body {
   margin: 0.25rem 0.5rem;
 }
 .slider-content {
-  min-height: 400px;
+  min-height: 480px;
   width: 75% !important;
 }
 .services-bg {
@@ -100,7 +114,7 @@ body {
   background-attachment: local;
   background-repeat: no-repeat;
   width: 100% !important;
-  height: 450px;
+  height: 480px;
 }
 .services-content {
   border: solid 1px #8080db;
@@ -192,7 +206,7 @@ body {
 .menu-fixed {
   top: 0px;
   position: fixed;
-  backdrop-filter: saturate(180%) blur(15px);
+  backdrop-filter: saturate(180%) blur(15px) brightness(60%);
   animation: appair-down 0.7s;
 }
 .menu {
@@ -274,7 +288,14 @@ body {
 #menu {
   z-index: 1;
 }
-
+@keyframes rotation-loop {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes check-slide {
   0% {
     opacity: 0;
@@ -339,6 +360,9 @@ body {
 }
 
 @media (max-width: 750px) {
+  .img-rotation div{
+    top: 10px!important;
+  }
   .items-about {
     width: 100%;
   }
@@ -346,11 +370,10 @@ body {
     padding: 0.25rem 2rem;
     font-size: x-large;
   }
-  .info-content div:nth-child(2) {
-    font-size: 2rem;
-    color: #2e2e53;
+  .info-content div:nth-child(3) {
+    font-size: 1.5rem;
   }
-  .info-content div:nth-child(1) h2 {
+  .info-content div:nth-child(2) h2 {
     font-size: 1.5rem;
   }
   .info-content {
