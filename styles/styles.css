@@ -3,6 +3,121 @@ body {
   margin: 0px !important;
   padding: 0px !important;
 }
+.address-contact div{
+  color: #202033;
+  font-size: 1.3rem;
+  font-family: "Jura", sans-serif !important;
+}
+.address-contact div:first-child{
+  width: 45px;
+  height: 45px;
+  background-position: center;
+  background-size: contain;
+  margin: 0 0.5rem 0 0;
+  background-image: url(../src/icones/maps.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.close div {
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/icones/close.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: rotation-loop 2s infinite;
+}
+.close {
+  padding: 0.2rem !important;
+  align-self: flex-end;
+  margin: 0.25rem -1.5rem 0.25rem 0;
+  width: 30px;
+  height: 30px;
+  border: solid 3px #5757c8;
+  color: #5757c8;
+  font-family: "Lalezar", sans-serif, cursive !important;
+  font-size: large;
+  border-radius: 10px;
+}
+.socialMedia-rows a:nth-child(4) div div:first-child {
+  background-image: url(../src/icones/phone.png);
+}
+.socialMedia-rows a:nth-child(3) div div:first-child {
+  background-image: url(../src/icones/wpp.png);
+}
+.socialMedia-rows a:nth-child(2) div div:first-child {
+  background-image: url(../src/icones/insta.png);
+}
+.socialMedia-rows a:nth-child(1) div div:first-child {
+  background-image: url(../src/icones/face.png);
+}
+.socialMedia-rows a div div:first-child {
+  width: 45px;
+  height: 45px;
+  background-position: center;
+  background-size: contain;
+  margin: 0 0.5rem 0 0;
+}
+.socialMedia-rows div {
+  color: #202033;
+  font-size: 1.3rem;
+  font-family: "Jura", sans-serif !important;
+}
+.presencial-contact {
+  margin: 1rem 0;
+  font-family: "Lalezar", sans-serif, cursive !important;
+  font-size: xx-large;
+  color: #5757c8;
+}
+.title-contact {
+  margin-bottom: 1rem;
+  font-family: "Lalezar", sans-serif, cursive !important;
+  font-size: xx-large;
+  color: #5757c8;
+}
+.contact-card a{
+  text-decoration: none!important;
+}
+.contact-card {
+  background-color: #c7c7ec;
+  padding: 0 2rem 2rem 2rem;
+  border: solid 5px #5757c8;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.contact-content {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  margin: 0 auto;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.199);
+}
+.social-media-imgs a:nth-child(5) div {
+  background-image: url(../src/icones/phone.png);
+}
+.social-media-imgs a:nth-child(4) div {
+  background-image: url(../src/icones/maps.png);
+}
+.social-media-imgs a:nth-child(3) div {
+  background-image: url(../src/icones/wpp.png);
+}
+.social-media-imgs a:nth-child(2) div {
+  background-image: url(../src/icones/insta.png);
+}
+.social-media-imgs a:nth-child(1) div {
+  background-image: url(../src/icones/face.png);
+}
+.social-media-imgs a {
+  margin: 0.5rem 0.4rem !important;
+}
+.social-media-imgs a div {
+  background-size: contain;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
 .img-rotation div {
   background-image: url("../src/icones/tesoura.png");
   background-repeat: no-repeat;
@@ -10,8 +125,8 @@ body {
   background-size: contain;
   min-width: 50px !important;
   min-height: 50px !important;
-  position: absolute!important;
-  top: 10px!important;
+  position: absolute !important;
+  top: 10px !important;
   animation: rotation-loop 2s infinite;
 }
 .show-opacity-animation {
@@ -360,8 +475,11 @@ body {
 }
 
 @media (max-width: 750px) {
-  .img-rotation div{
-    top: 10px!important;
+  .social-media-imgs a {
+    margin: 0.8rem 0.25rem !important;
+  }
+  .img-rotation div {
+    top: 10px !important;
   }
   .items-about {
     width: 100%;

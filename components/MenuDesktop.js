@@ -1,7 +1,8 @@
-import { useEffect, useState, useTransition } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import React from "react";
 import logo from "../src/imagens/logo.png";
+import Contacts from "./contatosContent.js/Contacts.js";
 
 function MenuDesktop(props) {
   let phoneNumber = 5541984040567;
@@ -11,11 +12,21 @@ function MenuDesktop(props) {
   function showMenu() {
     const menu = document.getElementById("menu");
     menu.classList.replace("menu", "menu-fixed");
-  }
+  };
 
   function closeMenu() {
     const menu = document.getElementById("menu");
     menu.classList.replace("menu-fixed", "menu");
+  };
+
+  const [contactVisibility, setContactVisibility] = useState(false);
+
+  const visibilidade = () => {
+    setContactVisibility(!contactVisibility);
+  }
+
+  const fechado = (fechadoValue) => {
+    setContactVisibility(fechadoValue)
   }
 
   useEffect(() => {
@@ -27,6 +38,7 @@ function MenuDesktop(props) {
 
   return (
     <>
+    <Contacts visibilidade={contactVisibility} fechado={fechado} />
       <div
         id="menu"
         className="menu d-flex flex-row justify-content-around align-items-center bottom-shadow w-100"
@@ -47,14 +59,28 @@ function MenuDesktop(props) {
           >
             EMPRESA
           </a>
-          <a href="#"
+          <a
             onClick={() => {
               window.scrollTo(0, props.servicosY - 100);
             }}
           >
             SERVICOS
           </a>
-          <a href={`https://wa.me/${phoneNumber}?text=${encodeURI(msg)}`} target='_blank'>AGENDE SEU HORARIO</a>
+
+          <a
+            className="cursor"
+            onClick={() => {
+              visibilidade();
+            }}
+          >
+            CONTATOS
+          </a>
+          <a
+            href={`https://wa.me/${phoneNumber}?text=${encodeURI(msg)}`}
+            target="_blank"
+          >
+            AGENDE SEU HORARIO
+          </a>
         </div>
       </div>
     </>

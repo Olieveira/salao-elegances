@@ -1,9 +1,11 @@
 import AboutResponsive from "./AboutResponsive";
 
 export default function About() {
+
   return (
     <>
-      <div id="about"
+      <div
+        id="about"
         className="w-100 about d-flex flex-column justify-content-center align-items-center"
         style={{ minHeight: "500px" }}
       >
@@ -13,14 +15,16 @@ export default function About() {
           </div>
           <div className="text-center items-about">
             <h2>EXPERIÊNCIA</h2>
-            <p>Há mais de 15 anos atuando na àrea, oferecemos um serviço excelente oriundo de muita prática e melhora!</p>
+            <p>
+              Há mais de 15 anos atuando na àrea, oferecemos um serviço
+              excelente oriundo de muita prática e melhora!
+            </p>
           </div>
         </div>
 
         <span className="line-caract-about" />
 
         <div className="w-100 p-4 d-flex flex-row flex-wrap justify-content-center align-items-center">
-
           <AboutResponsive />
         </div>
 
@@ -31,8 +35,11 @@ export default function About() {
             <div className="third-img"></div>
           </div>
           <div className="text-center items-about">
-            <h2>COMUNICAÇÃO</h2>
-            <p>Oferecemos contato em diversas plataformas para facilitar seu contato conosco, <a href="#">CONTATE-NOS!!</a></p>
+            <h2>ACESSIBILIDADE</h2>
+            <p>
+              Oferecemos acesso aos nossos serviços em diversas plataformas para facilitar seu
+              contato conosco, <a className="cursor" onClick={() => {window.scrollTo(0, 10000)}}>CONTATE-NOS!!</a>
+            </p>
           </div>
         </div>
         <span className="line-caract-about" />
