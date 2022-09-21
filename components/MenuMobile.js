@@ -97,8 +97,9 @@ function MenuMobile(props) {
 
             <div>
               <a
-                href={`https://wa.me/${phoneNumber}?text=${encodeURI(msg)}`}
-                target="_blank"
+                onClick={() => {
+                  visibilidade();
+                }}
               >
                 AGENDAR HORARIO
               </a>

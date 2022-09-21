@@ -4,7 +4,8 @@ import leftArrow from "../src/icones/left-arrow.png";
 import rightArrow from "../src/icones/right-arrow.png";
 
 export default function Servicos() {
-  let phoneNumber = 5541984040567;
+  let phone1 = 5541984040567;
+  let phone2 = 554197882709;
   let msg = `*Ola*, fui redirecionado(a) do site!\n\n
   *MENSAGEM ENVIADA AUTOMATICAMENTE!*`;
 
@@ -14,17 +15,17 @@ export default function Servicos() {
   const [current, setCurrent] = useState(0);
 
   const servicos = [
-    "CORTE MASCULINO",
-    "CORTE FEMININO",
-    "CORTE INFANTIL",
-    "PROGRESSIVA",
-    "SELAGEM",
-    "BOTOX PLÁSTICA CAPILAR",
-    "NUTRIÇÃO E RECONSTRUÇÃO",
-    "CRONOGRAMA CAPILAR",
-    "MANICURE",
-    "PEDICURE",
-    "DEPILAÇÃO",
+    ["CORTE MASCULINO", phone1],
+    ["CORTE FEMININO", phone1],
+    ["CORTE INFANTIL", phone1],
+    ["PROGRESSIVA", phone1],
+    ["SELAGEM", phone1],
+    ["BOTOX PLÁSTICA CAPILAR", phone1],
+    ["NUTRIÇÃO E RECONSTRUÇÃO", phone1],
+    ["CRONOGRAMA CAPILAR", phone1],
+    ["MANICURE", phone2],
+    ["PEDICURE", phone2],
+    ["DEPILAÇÃO", phone2],
   ];
 
   function changeCurrentClick(indexClick) {
@@ -57,10 +58,17 @@ export default function Servicos() {
                 <h2>SERVIÇOS</h2>
               </div>
               <div id="serviceText" className="mb-5 show-opacity-animation">
-                {servicos[current]}
+                {servicos[current][0]}
               </div>
               <div>
-                <a href={`https://wa.me/${phoneNumber}?text=${encodeURI(msg)}`} target='_blank'>AGENDAR</a>
+                <a
+                  href={`https://wa.me/${servicos[current][1]}?text=${encodeURI(
+                    msg
+                  )}`}
+                  target="_blank"
+                >
+                  AGENDAR
+                </a>
               </div>
             </div>
             <div className="selectors-bar w-100 d-flex flex-row justify-content-center align-items-center blur-blackBrightness">

@@ -13,16 +13,11 @@ export default function Footer() {
           >
             <div></div>
           </a>
-          <a href={`https://wa.me/${phoneNumber}`} target={"_blank"}>
-            <div></div>
-          </a>
+    
           <a
             href="https://www.google.com.br/maps/place/R.+Jorn.+Augusto+Waldrigues,+286+-+Cidade+Industrial+de+Curitiba,+Curitiba+-+PR,+81460-238/@-25.5322441,-49.3399249,17z/data=!3m1!4b1!4m5!3m4!1s0x94dcfd16367ce9c3:0x2a499b71456d49bb!8m2!3d-25.532249!4d-49.3377362"
             target={"_blank"}
           >
-            <div></div>
-          </a>
-          <a href="tel://5541984040567" target={"_blank"}>
             <div></div>
           </a>
         </div>

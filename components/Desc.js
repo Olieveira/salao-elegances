@@ -23,7 +23,14 @@ function Desc() {
             <p>Depilação</p>
           </div>
           <div className="p-2 button-desc">
-            <a href={`https://wa.me/${phoneNumber}?text=${encodeURI(msg)}`} target='_blank' >ENTRAR EM CONTATO</a>
+            <a
+              className="cursor"
+              onClick={() => {
+                window.scrollTo(0, 10000);
+              }}
+            >
+              ENTRAR EM CONTATO
+            </a>
           </div>
         </div>
       </div>
