@@ -1,4 +1,3 @@
-
 export default function Contacts({ visibilidade, fechado }) {
   const data = false;
   let phone1 = 5541984040567;
@@ -49,23 +48,21 @@ export default function Contacts({ visibilidade, fechado }) {
                   </div>
                 </details>
               </div>
-              <a href="tel://5541984040567" target={"_blank"}>
-                <div className="d-flex flex-row justify-content-start align-items-center">
-                  <div></div>
-                  <details>
-                    <summary>TELEFONE</summary>
-                    <div>
-                      <a href={`https://wa.me/${phone1}`} target={"_blank"}>
-                        CABELEIREIRO / BARBEARIA
-                      </a>
-                      <br />
-                      <a href={`https://wa.me/${phone2}`} target={"_blank"}>
-                        MANICURE / PEDICURE
-                      </a>
-                    </div>
-                  </details>
-                </div>
-              </a>
+              <div className="d-flex flex-row justify-content-start align-items-center">
+                <div></div>
+                <details>
+                  <summary>TELEFONE</summary>
+                  <div>
+                    <a href={`tel://${phone1}`} target={"_blank"}>
+                      CABELEIREIRO / BARBEARIA
+                    </a>
+                    <br />
+                    <a href={`tel://${phone2}`} target={"_blank"}>
+                      MANICURE / PEDICURE
+                    </a>
+                  </div>
+                </details>
+              </div>
             </div>
 
             <div className="presencial-contact">PRESENCIAL</div>
