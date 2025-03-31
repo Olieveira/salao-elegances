@@ -1,68 +1,37 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import React, { useState } from "react";
 import menu from "../src/icones/menu.png";
 import Contacts from "./contatosContent.js/Contacts.js";
 
 function MenuMobile(props) {
-  let phoneNumber = 5541984040567;
-  let msg = `*Ola*, fui redirecionado(a) do site!\n\n
-  *MENSAGEM ENVIADA AUTOMATICAMENTE!*`;
-
   const [contactVisibility, setContactVisibility] = useState(false);
-
-  const visibilidade = () => {
-    setContactVisibility(!contactVisibility);
-  };
-
-  const fechado = (fechadoValue) => {
-    setContactVisibility(fechadoValue);
-  };
-
   const [visible, setVisible] = useState("hidden");
 
-  function showMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.replace("menu", "menu-fixed");
-  }
-
-  function closeMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.replace("menu-fixed", "menu");
-  }
+  const toggleVisibility = () => setContactVisibility((prev) => !prev);
 
   useEffect(() => {
-    function handleScroll() {
-      window.scrollY >= 100 ? showMenu() : closeMenu();
+    const handleScroll = () => {
       const menu = document.getElementById("menu");
-    }
+      window.scrollY >= 100
+        ? menu.classList.replace("menu", "menu-fixed")
+        : menu.classList.replace("menu-fixed", "menu");
+    };
+
     window.addEventListener("scroll", handleScroll);
-  });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-      <Contacts visibilidade={contactVisibility} fechado={fechado} />
+      <Contacts visibilidade={contactVisibility} fechado={() => setContactVisibility(false)} />
       <div
         id="menu"
         className="d-flex flex-column justify-content-around align-items-center bottom-shadow w-100 menu"
       >
         <div className="d-flex flex-row justify-content-around align-items-center py-2 w-100">
           <div className="txt-lightBlue titulo">SALÃO ELEGANCES</div>
-          <div
-            onClick={() => {
-              if (visible == "hidden") {
-                setVisible("show");
-              } else {
-                setVisible("hidden");
-              }
-            }}
-          >
-            <Image
-              className="cursor"
-              src={menu}
-              width={"40px"}
-              height={"40px"}
-            />
+          <div onClick={() => setVisible(visible === "hidden" ? "show" : "hidden")}>
+            <Image className="cursor" src={menu} width={40} height={40} alt="Menu" />
           </div>
         </div>
         <div className={`pb-3 ${visible}`}>
@@ -72,37 +41,12 @@ function MenuMobile(props) {
           >
             <div>
               <a href="/">HOME</a>
-              <a
-                onClick={() => {
-                  window.scrollTo(0, props.empresaY - 100);
-                }}
-              >
-                EMPRESA
-              </a>
-              <a
-                onClick={() => {
-                  window.scrollTo(0, props.servicosY - 100);
-                }}
-              >
-                SERVICOS
-              </a>
+              <a onClick={() => window.scrollTo(0, props.empresaY - 100)}>EMPRESA</a>
+              <a onClick={() => window.scrollTo(0, props.servicosY - 100)}>SERVIÇOS</a>
             </div>
-            <a
-              onClick={() => {
-                visibilidade();
-              }}
-            >
-              CONTATOS
-            </a>
-
+            <a onClick={toggleVisibility}>CONTATOS</a>
             <div>
-              <a
-                onClick={() => {
-                  visibilidade();
-                }}
-              >
-                AGENDAR HORARIO
-              </a>
+              <a onClick={toggleVisibility}>AGENDAR HORÁRIO</a>
             </div>
           </div>
         </div>

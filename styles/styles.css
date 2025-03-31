@@ -61,18 +61,20 @@ details[open] summary {
   font-size: large;
   border-radius: 10px;
 }
-.socialMedia-rows a:nth-child(4) div div:first-child {
-  background-image: url(../src/icones/phone.png);
-}
-.socialMedia-rows div div:first-child {
-  background-image: url(../src/icones/wpp.png);
+.socialMedia-rows a:nth-child(1) div div:first-child {
+  background-image: url(../src/icones/face.png);
 }
 .socialMedia-rows a:nth-child(2) div div:first-child {
   background-image: url(../src/icones/insta.png);
 }
-.socialMedia-rows a:nth-child(1) div div:first-child {
-  background-image: url(../src/icones/face.png);
+.socialMedia-rows > div.d-flex.flex-row > div:first-child {
+  background-image: url(../src/icones/wpp.png);
 }
+.socialMedia-rows > div.d-flex.flex-row:last-child > div:first-child {
+  background-image: url(../src/icones/phone.png);
+}
+
+
 .socialMedia-rows div div:first-child {
   width: 45px;
   height: 45px;

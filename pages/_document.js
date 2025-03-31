@@ -2,10 +2,10 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
     return (
-        <Html style={{minHeight: '100%'}}>
+        <Html lang="pt-BR" style={{minHeight: '100%'}}>
             <Head>
                 <meta name='description' content='Salão Elegances, salão de beleza, cabeleireiro, manicure e pedicure, procedimentos estéticos, progressiva' />
-                <meta name='author' content='Salão Elegances' />
+                <meta name='author' content='Nathan Oliveira' />
                 <meta name='robots' content='index, follow' />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />

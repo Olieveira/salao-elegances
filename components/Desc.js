@@ -1,7 +1,4 @@
 function Desc() {
-  let phoneNumber = 5541984040567;
-  let msg = `*Ola*, fui redirecionado(a) do site!\n\n
-  *MENSAGEM ENVIADA AUTOMATICAMENTE!*`;
 
   return (
     <>

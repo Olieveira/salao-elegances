@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import leftArrow from "../src/icones/left-arrow.png";
 import rightArrow from "../src/icones/right-arrow.png";
 
 export default function Servicos() {
-  let phone1 = 5541984040567;
-  let phone2 = 554197882709;
+  const phone1 = process.env.NEXT_PUBLIC_PHONE1;
+  const phone2 = process.env.NEXT_PUBLIC_PHONE2;
   let msg = `*Ola*, fui redirecionado(a) do site!\n\n
   *MENSAGEM ENVIADA AUTOMATICAMENTE!*`;
 
@@ -29,17 +29,19 @@ export default function Servicos() {
   ];
 
   function changeCurrentClick(indexClick) {
-    const serviceText = document.getElementById("serviceText");
-    clearTimeout(t);
-    clearTimeout(tAnimation);
-    setCurrent(indexClick);
+    if (typeof window !== "undefined") {
+      const serviceText = document.getElementById("serviceText");
+      clearTimeout(t);
+      clearTimeout(tAnimation);
+      setCurrent(indexClick);
 
-    serviceText.classList.add("show-opacity-animation");
+      serviceText.classList.add("show-opacity-animation");
 
-    tAnimation = setTimeout(
-      () => serviceText.classList.remove("show-opacity-animation"),
-      1000
-    );
+      tAnimation = setTimeout(
+        () => serviceText.classList.remove("show-opacity-animation"),
+        1000
+      );
+    }
   }
 
   return (
